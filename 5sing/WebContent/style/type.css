@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+.top_type{ width:600px; height:200px;
+/* background:#00F*/}
+.type_picture{ width:100px; height:100px; margin-left:50px; margin-top:50px; position:absolute;}
+.type_name{ width:130px; height:30px; position:absolute; margin-left:200px;  margin-top:60px;
+font-size:18px;
+color:#F00;
+font-weight:600;}
+.t1 tr{
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+	text-align:center;}
+.type_picture img{
+	width:100px;
+	height:100px;}
+.span_text{
+	width:80px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	}
+body{
+	background:url(../images/abstract_color_background_picture_8016.jpg);
+	margin:0px auto;
+	padding:0px;}

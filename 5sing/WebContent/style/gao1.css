@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu1{float:left; width:800px; background:#FFF; }
+.menu2{ float:left;  width:200px; border:solid 1;}
+.biaoTi{ background:#F4F4F4;width:700px; height:74px; margin:0 auto;}
+.huaTi{ font-family:"黑体"; font-weight:bold; font-size:18px; background: #9F9; height:35px; }
+.left_list{ list-style:none;  margin-top:4px;}
+.h{ margin-top:10px}
+a:hover {color: #F00; text-decoration:underline} /* 鼠标移动到链接上 */
+a:link{ text-decoration:none;color:#333}
+a:visited{ text-decoration:none; color:#333}
+.text{ font-size:12px}
+a:active{ text-decoration:underline; color:#F36}

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background:url(../images/1194H4N622.jpg);}
+	div{
+		margin:0px auto;}
+.show_top{
+	width:800px;
+	height:200px;
+/*	background-color:#063;*/}
+.show_top_left{
+	width:160px;
+	height:160px;
+	padding:20px;
+	float:left;}
+.show_top_left img{
+	width:160px;
+	height:160px;}
+.show_top_min{
+	width:600px;
+	height:200px;
+	float:left;
+/*	background-color:#063;*/}
+.show_main{
+	width:100%;
+	min-height:500px;
+	padding-top:60px;}

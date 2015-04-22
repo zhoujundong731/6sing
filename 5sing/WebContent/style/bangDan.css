@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* <!--主页面的css--> */
+body{
+	background:url(../images/20130319010124627.jpg) repeat-y;
+	height:500px;
+	margin:0px;
+	padding:0px;}
+a:link,a:visited{text-decoration:none;color:#333}
+a:hover{text-decoration:underline;color:#e00;border-bottom:1px dashed #51bfe0;font-weight: bold }
+.menu1{ width:100%; min-height:600px;padding-top: 100px; }
+.menu2{width:200px; min-height:600px; float:left; margin-left: 40px;}
+.menu3{ width:800px; min-height:600px; float: left;  margin-left: 40px;}
+<!--导航页面的css-->
+.dao_hang{ width:180px; height:275px;  position: fixed ; margin-top:15px; margin-left:5px;  }
+.dao_fen{ width:174px; height:40px; margin-top:6px; line-height:40px; margin-left:3px; background:#F4F4F4}
+.dao_fen1{ width:174px; height:44px;  margin-left:3px; }
+.dao_cion{ width:4px; height:15px; background:#60B200; float:left}
+.dao_cion2{ width:6px; height:22px; background:#F53F1F; float:left}
+.dao_coin3{ width:5xp; height:11px; background:#20A8E2; float:left}
+.dao_text{ font: "黑体"; font-size:22px; }
+.dao_text1{ font: "黑体"; font-size:18px; }
+<!--歌曲主页面对额csss-->
+.bang_top{width:800px; height:98px; }
+.bang_top_1{ width:800px; height:60px; font-size:24px; }
+.bang_top_2{ width:800px; height:38px; }
+.bang_top_3{ width:800px; height:30px; background:#F4F4F4}
+.bang_top_3_1{ width:50px; height:30px; float:left; line-height: 30px; }
+.bang_top_3_2{ width:120px; height:30px; line-height: 30px; float:left }
+.bang_top_3_3{ width:200px; height:30px; line-height: 30px;  float:left}
+.bang_top_3_4{ width:160px; height:30px; line-height: 30px;  float:left}
+.bang_top_3_5{ width:110px; height:30px; line-height: 30px;  float:left}
+.bang_top_3_6{ width:200px; height:30px; line-height: 30px;  float:left}
+.bang_top_3_text{ font-size:14px; font:"黑体"; color:#666}
+.bang_top_text{ font-size:18px; color:#999; font:"黑体"}
+.bang_middle{width:800px; height:820px; }
+.bang_middle_1{width:800px; height:60px; margin-top:5px; }

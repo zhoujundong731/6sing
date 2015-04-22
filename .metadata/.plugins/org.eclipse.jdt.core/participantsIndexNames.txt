@@ -1,0 +1,13 @@
+INDEX VERSION 1.126
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2144280550.index
+\5sing\src
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\109533224.index
+\HibernateTest02\src
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\811203577.index
+\webTest02\src
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\26610161.index
+\5sing\src
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1357205198.index
+\5sing\src
+D:\j2ee\J2EE6sing\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\957399223.index
+\registerYanzheng\src

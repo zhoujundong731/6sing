@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+<!--视频播放器的css-->
+.player_top{ width:1000px; min-height:500px; }
+.player_top_1{ width:700px; height:500px; margin-left:50px; float:left ;margin-top:10px; }
+.player_top_2{ width:200px;  height:500px; margin-top:10px;  float:left ;}
+.dao_fen{ width:180px; height:60px; margin-top:10px; margin-left:3px; background:#F4F4F4}
+a:link,a:visited{text-decoration:none;color:#333}
+a:hover{text-decoration:underline;color:#e00;border-bottom:2px dashed #51bfe0;font-weight: bold }
+.dao_hang{ width:180px; height:275px; margin-top:15px; margin-left:5px;  }
+.wei_zhi{ width:1000px; height:20px; float:left}
+.xia_zai{width:100px; height:20px; margin-left:410px;}
+.tou_xiang{ width:60px; height:60px; float:left;  }
+.tou_xiang_mv{  width:120px; height:60px; float:left; }
+.xia_zai_text{font-size:12px;}
+<!--音乐播放器的css-->
+.menu_body{margin:0px auto;background: url(background5.jpg)}
+.menu_song_player{ width:730px;  height:400px; margin-left:230px; padding-top:100px;}
+.menu_song_left{ width:260px; height:300px; float:left; }
+.menu_song_right{ width:240px; height:400px; float:left;}
+.menu_song_left_1{width:260px; height:260px;}
+.menu_song_left_1 img{
+	width:260px;
+	height:260px;
+	border-radius:10px;}
+.menu_song_left_2{width:260px; height:100px;   }
+.menu_song_list{ width:240px; height:30px;margin-top:5px ; }
+.menu_song_list_text{ font:"黑体"; font-size:14px; font-weight:bold; height:50px; line-height:50px; }
+.menu_song_lrc{ width:230px; height:400px; float:left;filter:alpha(opacity=20);background:url(../images/bacakgrond11.jpg);}
+.lrc_text{font-size:18px;font:"黑体";}
+#music{
+	background:url(../images/140929rxb8hz7xhy8tvyhq.jpg);
+	margin:0px;
+	padding:0px;}
+#playMV{
+	background:url(../images/1194H443127.jpg);}
