@@ -100,7 +100,7 @@
 		<level value="DEBUG"></level>
 		<appender-ref ref="hibernate"/>
 	</logger>
-	<logger name="log4j.logger.org.hibernate.hql">
+	<logger name="org.hibernate.hql">
 		<level value="DEBUG"></level>
 		<appender-ref ref="hibernate"/>
 	</logger>
