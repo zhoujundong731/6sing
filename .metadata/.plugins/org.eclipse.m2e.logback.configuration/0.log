@@ -1,0 +1,4 @@
+2015-04-27 17:40:14,415 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\j2ee\J2EE6sing\SpringTest01
+2015-04-27 17:40:14,420 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s C:\Users\zhoujundong\.m2\settings.xml eclipse:clean eclipse:eclipse
+2015-04-27 18:44:15,200 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\j2ee\J2EE6sing\SpringTest01
+2015-04-27 18:44:15,200 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -s C:\Users\zhoujundong\.m2\settings.xml eclipse:clean eclipse:eclipse
