@@ -1,0 +1,22 @@
+package com.zhou.song.bean;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Album implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5253649476595544010L;
+	private Long bId;
+	private String bName;
+	private String bTest;
+	private String bImage;
+	private Date bIssueDate;
+	private Date bCreateDate;
+	private Date bUpdateDate;
+	private String bOwner;
+	private Long singerId;
+	
+}

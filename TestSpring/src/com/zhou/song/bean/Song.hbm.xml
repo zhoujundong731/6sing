@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-23 15:18:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.zhou.song.bean.Song" table="SONG">
+        <id name="sId" type="java.lang.Long" access="field">
+            <column name="SID" />
+            <generator class="assigned" />
+        </id>
+        <property name="sName" type="java.lang.String" access="field">
+            <column name="SNAME" />
+        </property>
+        <property name="sMp3Add" type="java.lang.String" access="field">
+            <column name="SMP3ADD" />
+        </property>
+        <property name="sWAdd" type="java.lang.String" access="field">
+            <column name="SWADD" />
+        </property>
+        <property name="sMvAdd" type="java.lang.String" access="field">
+            <column name="SMVADD" />
+        </property>
+        <property name="sLrcAdd" type="java.lang.String" access="field">
+            <column name="SLRCADD" />
+        </property>
+        <property name="sText" type="java.lang.String" access="field">
+            <column name="STEXT" />
+        </property>
+        <property name="sClickNum" type="int" access="field">
+            <column name="SCLICKNUM" />
+        </property>
+        <property name="sDown" type="int" access="field">
+            <column name="SDOWN" />
+        </property>
+        <property name="sOwner" type="java.lang.String" access="field">
+            <column name="SOWNER" />
+        </property>
+        <property name="sAlbum" type="java.lang.String" access="field">
+            <column name="SALBUM" />
+        </property>
+        <property name="singerId" type="java.lang.Long">
+            <column name="SINGERID" />
+        </property>
+        <property name="albumId" type="java.lang.Long">
+            <column name="ALBUMID" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+    </class>
+</hibernate-mapping>

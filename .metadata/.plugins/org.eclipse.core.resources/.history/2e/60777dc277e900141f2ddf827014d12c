@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "log4j.dtd">  
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="sample-log-console" class="org.apache.log4j.ConsoleAppender"> 
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value="%d %-5p [%t] [%l] %m%n"/>  
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+       		<param name="LevelMin" value="ERROR"/>
+       		<param name="LevelMax" value="ERROR"/>
+       	</filter>
+    </appender>
+    <!-- 默认的appender -->
+    <appender name="default.log" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="${catalina.home}/MyLog/default.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="3"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] [%l] %m%n"/>
+        </layout>
+    </appender>
+    <!-- 实体类的appender -->
+    <appender name="entity.log" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.home}/MyLog/entity.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="3"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] [%l] %m%n"/>
+        </layout>
+    </appender> 
+    <!-- 过滤error信息 -->
+    <appender name="FileErrorInfo" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.home}/MyLog/error.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="3"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] [%l] %m%n"/>
+        </layout>
+       	<filter class="org.apache.log4j.varia.LevelRangeFilter">
+       		<param name="LevelMin" value="ERROR"/>
+       		<param name="LevelMax" value="ERROR"/>
+       	</filter>
+    </appender>
+     <!-- 实体类的包 -->
+    <category name="entity" additivity="false">
+    	<priority value="INFO"></priority>
+    	<appender-ref ref="entity.log"/>
+    	<appender-ref ref="FileErrorInfo"/>
+    	<appender-ref ref="sample-log-console"/>
+    </category>
+    <logger name="logger-test" additivity="false">
+    	<level value="DEBUG"></level>
+    	<appender-ref ref="sample-log-console"/>
+    	<appender-ref ref="FileErrorInfo"/>
+    </logger>
+	<root>  
+        <level value="DEBUG"/> 
+        <appender-ref ref="default.log"/>
+        <appender-ref ref="FileErrorInfo"/>
+        <appender-ref ref="sample-log-console"/>
+    </root>
+    
+    <!-- hibernate设置 -->
+    <logger name="logger.org.hibernate.type">
+    	<level value="TRACE"></level>
+    	<appender-ref ref="hibernate"/>
+    </logger>
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder">
+    	<level value="TRACE"></level>
+    	<appender-ref ref="hibernate"/>
+    </logger>
+	<logger name="org.hibernate.type.descriptor.sql.BasicExtractor">
+		<level value="TRACE"></level>
+		<appender-ref ref="hibernate"/>
+	</logger>
+	<logger name="log4j.logger.org.hibernate.sql">
+		<level value="DEBUG"></level>
+		<appender-ref ref="hibernate"/>
+	</logger>
+	<logger name="org.hibernate.hql">
+		<level value="DEBUG"></level>
+		<appender-ref ref="hibernate"/>
+	</logger>
+	<appender name="hibernate" class="org.apache.log4j.RollingFileAppender">
+    	<param name="File" value="${catalina.home}/MyLog/hibernate.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="1"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] [%l] %m%n"/>
+        </layout>
+    </appender>
+</log4j:configuration>

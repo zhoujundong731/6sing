@@ -1,0 +1,7 @@
+package com.zhou.song.bean;
+
+import java.io.Serializable;
+
+public class Collection implements Serializable{
+	private ctId;
+}

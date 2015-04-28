@@ -1,0 +1,5 @@
+package HibernateDao;
+
+public class AccountDaoImpl extends GenericDAOImpl<T, Serializable>{
+
+}

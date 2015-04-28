@@ -1,0 +1,5 @@
+package HibernateSessionDao;
+
+public class GenMyDao implements IGenericDAO{
+
+}

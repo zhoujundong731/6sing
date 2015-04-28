@@ -1,0 +1,9 @@
+package HibernateSessionDao;
+
+import java.io.Serializable;
+
+import HibernateDao.IGenericDAO;
+
+public class GenMyDao<T,PK extends Serializable> implements IGenericDAO{
+
+}

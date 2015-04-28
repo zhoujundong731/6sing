@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-23 15:18:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.zhou.song.bean.Album" table="ALBUM">
+        <id name="bId" type="java.lang.Long" access="field">
+            <column name="BID" />
+            <generator class="assigned" />
+        </id>
+        <property name="bName" type="java.lang.String" access="field">
+            <column name="BNAME" />
+        </property>
+        <property name="bText" type="java.lang.String" access="field">
+            <column name="BTEXT" />
+        </property>
+        <property name="bImage" type="java.lang.String" access="field">
+            <column name="BIMAGE" />
+        </property>
+        <property name="bIssueDate" type="java.util.Date" access="field">
+            <column name="BISSUEDATE" />
+        </property>
+        <property name="bCreateDate" type="java.util.Date" access="field">
+            <column name="BCREATEDATE" />
+        </property>
+        <property name="bOwner" type="java.lang.String" access="field">
+            <column name="BOWNER" />
+        </property>
+        <property name="singerId" type="java.lang.Long">
+            <column name="SINGERID" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+package test;
+
+import com.zhou.dao.IUserAccountDao;
+
+public class UserAccountManager {
+	private IUserAccountDao userAccountDao;
+
+	public void setUserAccountDao(IUserAccountDao userAccountDao) {
+		this.userAccountDao = userAccountDao;
+	}
+	public 
+}

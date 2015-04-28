@@ -1,0 +1,19 @@
+package test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class main {
+
+	public static void main(String[] args) {
+		//Resource resource=new FileSystemResource("helloMessage.xml");
+		ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
+		//BeanFactory f=new XmlBeanFactory(resource);
+		/*Persion persion=(Persion)ctx.getBean("persion");
+		persion.testAdd();*/
+		UserAccountManager manager=ctx.getBean("userAccountManager")
+
+	}
+
+}

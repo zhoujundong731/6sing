@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-21 18:14:42 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.zhou.account.bean.Account" table="ACCOUNT">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="sequence" />
+        </id>
+        <property name="name" type="java.lang.String" unique="true" unique-key="true">
+            <column name="NAME" />
+        </property>
+        <property name="sex" type="char">
+            <column name="SEX" />
+        </property>
+        <property name="image" type="java.lang.String">
+            <column name="IMAGE" />
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="TYPE" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        
+        <joined-subclass name="com.zhou.account.bean.UserAccount" table="USERACCOUNT">
+        	<key column="ACCOUNTID">
+        	</key>
+	        <property name="nikeName" type="java.lang.String">
+	            <column name="NIKENAME" />
+	        </property>
+	        <property name="password" type="java.lang.String">
+	            <column name="PASSWORD" />
+	        </property>
+	        <property name="email" type="java.lang.String">
+	            <column name="EMAIL" />
+	        </property>
+	        <property name="phoneNumber" type="java.lang.Long">
+	            <column name="PHONENUMBER" />
+	        </property>
+	        <property name="presentation" type="java.lang.String">
+	            <column name="PRESENTATION" />
+	        </property>
+	         <property name="address" type="java.lang.String">
+	            <column name="ADDRESS" />
+	        </property>
+        </joined-subclass>
+        <joined-subclass name="com.zhou.account.bean.ManagerAccount" table="MANAGERACCOUNT">
+	        <key column="ACCOUNTID">
+	        	</key>
+	        <property name="email" type="java.lang.String">
+	            <column name="EMAIL" />
+	        </property>
+	        <property name="phoneNumber" type="java.lang.String">
+	            <column name="PHONENUMBER" />
+	        </property>
+	        <property name="power" type="java.lang.Integer">
+	            <column name="POWER" />
+	        </property>
+	        <property name="password" type="java.lang.String">
+	            <column name="PASSWORD" />
+	        </property>
+    	</joined-subclass>
+    	<joined-subclass name="com.zhou.account.bean.SingerAccount" table="SINGERACCOUNT">
+	        <key column="ACCOUNTID">
+	        	</key>
+	        <property name="heat" type="int">
+	            <column name="EMAIL" />
+	        </property>
+	        <property name="presentation" type="java.lang.String">
+	            <column name="PRESENTATION" />
+	        </property>
+    	</joined-subclass>
+    </class>
+</hibernate-mapping>

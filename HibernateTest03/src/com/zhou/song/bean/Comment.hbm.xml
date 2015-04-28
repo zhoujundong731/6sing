@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-23 15:18:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.zhou.song.bean.Comment" table="COMMENT">
+        <id name="cId" type="java.lang.Long" access="field">
+            <column name="CID" />
+            <generator class="assigned" />
+        </id>
+        <property name="songId" type="java.lang.Long">
+            <column name="SONGID" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USERID" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="userImgAdd" type="java.lang.String">
+            <column name="USERIMGADD" />
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATEDATE" />
+        </property>
+        <property name="cText" type="java.lang.String" access="field">
+            <column name="CTEXT" />
+        </property>
+    </class>
+</hibernate-mapping>

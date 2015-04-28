@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 配置action的动作类由spring进行托管-->
+	<constant name="objectFactory" value="spring"></constant>
+	<!-- 配置解决struts2中文传输乱码问题-->
+	<constant name="struts.i18n.encoding" value="gb2312"></constant>
+	<!-- 注册action动作包 -->
+	<package name="actions" extends="struts-default" namespace="/">
+		<!-- 注册action动作 -->
+		<action name="admins" class="adminsAction">
+			<!--result结果 -->
+			<result name="addok">/addok.jsp</result>
+			<result name="adderror">/adderror.jsp</result>
+		</action>
+	</package>
+</struts>    

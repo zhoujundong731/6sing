@@ -1,0 +1,17 @@
+package test;
+
+import com.zhou.account.bean.UserAccount;
+import com.zhou.dao.IUserAccountDao;
+
+public class UserAccountManager {
+	private IUserAccountDao userAccountDao;
+
+	public void setUserAccountDao(IUserAccountDao userAccountDao) {
+		this.userAccountDao = userAccountDao;
+	}
+	public void addUserAccount(){
+		UserAccount account=new UserAccount();
+		account.setName("测试用户2");
+		this.userAccountDao.saveForKey(account)
+	}
+}

@@ -1,0 +1,9 @@
+package HibernateDao;
+
+import com.zhou.account.bean.Account;
+
+public class AccountDaoImpl extends GenericDAOImpl<Account, Long>{
+	public Long add(Account account){
+		
+	}
+}

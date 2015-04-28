@@ -1,0 +1,80 @@
+package com.zhou.account.bean;
+import java.util.Date;
+public class Account implements IAccount{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4108351687614804574L;
+	private Long id;
+	private String name;
+	private char sex;
+	private String image;
+	private String type;
+	private Date createDate;
+	private String status;
+	public Account() {
+		super();
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public char getSex() {
+		return sex;
+	}
+	public void setSex(char sex) {
+		this.sex = sex;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Date getCreateDate() {
+		return createDate;
+	}
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", sex=" + sex
+				+ ", image=" + image + ", power=" + type + ", createDate="
+				+ createDate + ", status=" + status + "]";
+	}
+	public Account( String name, char sex, String image, String power,
+			Date createDate, String status) {
+		super();
+		this.name = name;
+		this.sex = sex;
+		this.image = image;
+		this.type = power;
+		this.createDate = createDate;
+		this.status = status;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,16 @@
+package test;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+
+public class main {
+
+	public static void main(String[] args) {
+		Resource resource=new FileSystemResource("helloMessage.xml");
+		BeanFactory f=new XmlBeanFactory(resource);
+		Persion persion=(Persion)f.getBean("persion");
+
+	}
+
+}

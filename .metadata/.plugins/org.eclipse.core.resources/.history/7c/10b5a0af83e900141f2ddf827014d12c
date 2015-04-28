@@ -1,0 +1,11 @@
+package com.zhou.song.bean;
+
+import java.io.Serializable;
+import java.util.Date;
+
+public class Comment implements Serializable{
+	private Long cId;
+	private Long songId;
+	private Long userId;
+	private Date createDate;
+}

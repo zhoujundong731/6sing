@@ -1,0 +1,14 @@
+package com.zhou.song.bean;
+
+import java.io.Serializable;
+
+public class Song implements Serializable{
+	private Long sId;
+	private String sName;
+	private String sMp3Add;
+	private String sWAdd;
+	private String sMvAdd;
+	private String sText;
+	private int sClickNum;
+	private int sDown;
+}
