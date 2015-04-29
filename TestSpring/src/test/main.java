@@ -15,16 +15,11 @@ public class main {
 		AccountManager manager=(AccountManager) ctx.getBean("accountManager");
 		UserAccount account=null;
 		try {
-			account=manager.find(4L);
-			account.setId(7L);
-			account.setEmail("测试邮箱2222!");
-			account.setName("ceshi22222222");
-			manager.update(account);
+			System.out.println(manager.findIsHaveName("张三"));
 		}catch(Exception e){
 			System.out.println("异常："+e.getMessage());
 			e.printStackTrace();
 		}
-		System.out.println(account.toString());
 		
 		/*main main=new main();
 		boolean flag=true;
