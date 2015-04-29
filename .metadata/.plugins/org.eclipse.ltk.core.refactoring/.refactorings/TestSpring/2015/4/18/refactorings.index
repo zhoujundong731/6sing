@@ -6,3 +6,8 @@
 1430191684870	Rename package 'HibernateDao'
 1430211751968	Move compilation unit
 1430217440828	Rename type 'UserAccountManager'
+1430285327006	Move compilation unit
+1430287614860	Rename type 'DaoExeception'
+1430292029276	Delete element
+1430292360550	Rename type 'IUserAccountDao'
+1430292388212	Rename type 'IUserAccountDaoImpl'

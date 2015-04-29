@@ -1,0 +1,38 @@
+package com.zhou.dao;
+
+import com.zhou.account.bean.SingerAccount;
+
+public class SingerAccountDaoImpl extends GenericDAOImpl implements
+		ISingerAccountDao {
+
+	@Override
+	public void save(SingerAccount entity) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Long saveForKey(SingerAccount entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(SingerAccount entity) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public SingerAccount get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

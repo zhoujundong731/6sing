@@ -1,0 +1,6 @@
+package com.zhou.service;
+
+public interface IAccountManager {
+	public void saveUserAccount() throws Exception;
+	public void saveManagerAccount()
+}

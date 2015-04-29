@@ -1,0 +1,5 @@
+package com.zhou.dao;
+
+public interface ISingerAccountDao extends IGenericDAO<T, PK> {
+
+}

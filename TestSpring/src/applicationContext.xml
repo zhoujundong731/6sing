@@ -76,7 +76,7 @@
 	</bean>
 	<!-- <bean id="persion" class="test.Persion"> <property name="userAccountDao"> 
 		<ref bean="userAccountDao"/> </property> </bean> -->
-	<bean id="userAccountManager" class="com.zhou.service.AccountManager">
+	<bean id="accountManager" class="com.zhou.service.AccountManager">
 		<property name="userAccountDao">
 			<ref bean="userAccountDao" />
 		</property>
