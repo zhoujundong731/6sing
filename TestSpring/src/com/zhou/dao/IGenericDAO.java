@@ -2,10 +2,12 @@ package com.zhou.dao;
  
 import java.io.Serializable;
 import java.util.List;
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Criterion;
-/*import org.springside.modules.orm.hibernate.Page;*/
+
+import com.zhou.vo.PageBean;
  
  
 /**
@@ -15,17 +17,50 @@ import org.hibernate.criterion.Criterion;
  * 
  */
 public interface IGenericDAO<T, PK extends Serializable> {
- 
+	
+    /**
+     * 增加
+     * @param entity
+     */
     public void save(T entity);
+    
+    /**
+     * 返回Id的添加
+     * @param entity
+     * @return ID
+     */
     public PK saveForKey(T entity);
+    
+    /**
+     * 修改
+     * @param entity
+     */
+    public void update(T entity);
  
+    /**
+     * 删除
+     * @param entity
+     */
     public void delete(T entity);
  
+    /**
+     * 删除
+     * @param id
+     */
     public void delete(PK id);
  
+    /**
+     * 查询所有
+     * @return list
+     */
     public List<T> findAll();
  
-   // public Page<T> findAll(Page<T> page);
+    /**
+     * 分页查询所有
+     * @param page
+     * @return pageBean
+     */
+    public PageBean findAll(PageBean page);
  
     /**
      * Gets the object by ID .
@@ -54,7 +89,7 @@ public interface IGenericDAO<T, PK extends Serializable> {
      * 
      * @return Paging query results ,Comes with a results list and all query parameters .
      */
-    //public Page<T> find(Page<T> page, String hql, Object... values);
+    public PageBean find(PageBean page, String hql, Object... values);
  
     /**
      * Press the HQL query only object .

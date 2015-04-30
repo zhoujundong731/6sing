@@ -69,7 +69,7 @@
 	        <key column="ACCOUNTID">
 	        	</key>
 	        <property name="heat" type="int">
-	            <column name="EMAIL" />
+	            <column name="HEAT" />
 	        </property>
 	        <property name="presentation" type="java.lang.String">
 	            <column name="PRESENTATION" />

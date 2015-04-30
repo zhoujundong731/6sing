@@ -6654,3 +6654,6 @@ java.io.FileNotFoundException: D:\j2ee\J2EE6sing\HibernateTest03\build\classes\s
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.osgi 2 1 2015-04-30 15:29:31.346
+!MESSAGE NLS unused message: NewHibernateMappingElementsSelectionPage_select in: org.hibernate.eclipse.jdt.ui.internal.JdtUiMessages

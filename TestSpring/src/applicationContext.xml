@@ -30,7 +30,7 @@
 		<property name="username" value="root"></property>
 		<property name="password" value="1"></property>
 		<property name="defaultAutoCommit">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</bean>
 	<bean id="sessionFactory"
@@ -43,8 +43,7 @@
 				<prop key="hibernate.dialect">
 					org.hibernate.dialect.MySQLDialect
 				</prop>
-				<!-- <prop key="hibernate.transaction.factory_class"> org.hibernate.transaction.JTATransactionFactory 
-					</prop> -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
@@ -52,10 +51,27 @@
 			<list>
 				<value>com/zhou/account/bean/Account.hbm.xml</value>
 				<value>com/zhou/song/bean/SongType.hbm.xml</value>
+				<value>com/zhou/song/bean/Menu.hbm.xml</value>
+				<value>com/zhou/song/bean/SubMenu.hbm.xml</value>
+				<value>com/many/type.hbm.xml</value>
+				<value>com/many/user.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
-
+	<bean id="userDao" class="com.many.userDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="typeDao" class="com.many.typeDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory">
@@ -63,6 +79,30 @@
 		</property>
 	</bean>
 	<bean id="userAccountDao" class="com.zhou.dao.UserAccountDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="singerAccountDao" class="com.zhou.dao.SingerAccountDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="managerAccountDao" class="com.zhou.dao.ManagerAccountDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="menuDao" class="com.zhou.dao.MenuDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="subMenuDao" class="com.zhou.dao.SubMenuDaoImpl"
 		abstract="false" lazy-init="default" autowire="default">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
@@ -76,12 +116,15 @@
 	</bean>
 	<!-- <bean id="persion" class="test.Persion"> <property name="userAccountDao"> 
 		<ref bean="userAccountDao"/> </property> </bean> -->
-	<bean id="accountManager" class="com.zhou.service.AccountManager">
+	<bean id="accountManager" class="com.zhou.manager.AccountManager">
 		<property name="userAccountDao">
 			<ref bean="userAccountDao" />
 		</property>
-		<property name="songTypeDao">
-			<ref bean="songTypeDao" />
+		<property name="singerAccountDao">
+			<ref bean="singerAccountDao" />
+		</property>
+		<property name="managerAccountDao">
+			<ref bean="managerAccountDao" />
 		</property>
 	</bean>
 
