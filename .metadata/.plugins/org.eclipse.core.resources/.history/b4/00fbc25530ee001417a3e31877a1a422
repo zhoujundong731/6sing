@@ -1,9 +1,0 @@
-
-public class DaoExeception extends Exception {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6653618450353841605L;
-	
-}

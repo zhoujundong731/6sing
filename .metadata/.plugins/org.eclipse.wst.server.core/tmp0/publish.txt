@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Fri Apr 24 19:38:37 CST 2015
-org.eclipse.jst.jee.server\:HibernateTest03=D\:\\zhoujundong\\ruanjian\\apache-tomcat-7.0.57\\webapps\\HibernateTest03
+#Wed May 20 18:04:17 CST 2015
+org.eclipse.jst.jee.server\:5sing=D\:\\zhoujundong\\ruanjian\\apache-tomcat-7.0.57\\webapps\\5sing
+org.eclipse.jst.jee.server\:registerYanzheng=D\:\\zhoujundong\\ruanjian\\apache-tomcat-7.0.57\\webapps\\registerYanzheng

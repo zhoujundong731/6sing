@@ -10,8 +10,4 @@
     <servlet-class>servlet.InitServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>InitServlet</servlet-name>
-    <url-pattern>/InitServlet</url-pattern>
-  </servlet-mapping>
 </web-app>

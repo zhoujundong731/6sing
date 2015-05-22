@@ -3,25 +3,42 @@ package com.zhou.song.bean;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.zhou.account.bean.UserAccount;
+
 public class Comment implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7879978380128180997L;
 	private Long cId;
-	private Long songId;
-	private Long userId;
+/*	private Long songId;
+	private Long userId;*/
 	private String userName;
 	private String userImgAdd;
 	private Date createDate;
 	private String cText;
+	private Song song;
+	private UserAccount user;
+	
+	public Song getSong() {
+		return song;
+	}
+	public void setSong(Song song) {
+		this.song = song;
+	}
+	public UserAccount getUser() {
+		return user;
+	}
+	public void setUser(UserAccount user) {
+		this.user = user;
+	}
 	public Long getcId() {
 		return cId;
 	}
 	public void setcId(Long cId) {
 		this.cId = cId;
 	}
-	public Long getSongId() {
+	/*public Long getSongId() {
 		return songId;
 	}
 	public void setSongId(Long songId) {
@@ -32,7 +49,7 @@ public class Comment implements Serializable{
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
-	}
+	}*/
 	public String getUserName() {
 		return userName;
 	}
@@ -59,8 +76,7 @@ public class Comment implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "Comment [cId=" + cId + ", songId=" + songId + ", userId="
-				+ userId + ", userName=" + userName + ", userImgAdd="
+		return "Comment [cId=" + cId +  ", userName=" + userName + ", userImgAdd="
 				+ userImgAdd + ", createDate=" + createDate + ", cText="
 				+ cText + "]";
 	}
@@ -68,5 +84,6 @@ public class Comment implements Serializable{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+	/*", songId=" + songId + ", userId="
+	+ userId +*/
 }

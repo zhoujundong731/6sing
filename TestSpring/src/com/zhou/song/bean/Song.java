@@ -2,6 +2,10 @@ package com.zhou.song.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.zhou.account.bean.Account;
 
 public class Song implements Serializable{
 	/**
@@ -19,11 +23,37 @@ public class Song implements Serializable{
 	private int sDown;
 	private String sOwner;
 	private String sAlbum;
-	private Long singerId;
-	private Long albumId;
+/*	private Long singerId;*/
 	private Date createDate;
-	
-	
+	private Set<SongType> songtypes=new HashSet<SongType>();
+	private Account account;
+	private Album album;
+	private Set<Comment> comments=new HashSet<Comment>();
+	 
+	public Set<Comment> getComments() {
+		return comments;
+	}
+	public void setComments(Set<Comment> comments) {
+		this.comments = comments;
+	}
+	public Album getAlbum() {
+		return album;
+	}
+	public void setAlbum(Album album) {
+		this.album = album;
+	}
+	public Account getAccount() {
+		return account;
+	}
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+	public Set<SongType> getSongtypes() {
+		return songtypes;
+	}
+	public void setSongtypes(Set<SongType> songtypes) {
+		this.songtypes = songtypes;
+	}
 	public Long getsId() {
 		return sId;
 	}
@@ -90,18 +120,12 @@ public class Song implements Serializable{
 	public void setsAlbum(String sAlbum) {
 		this.sAlbum = sAlbum;
 	}
-	public Long getSingerId() {
+	/*public Long getSingerId() {
 		return singerId;
 	}
 	public void setSingerId(Long singerId) {
 		this.singerId = singerId;
-	}
-	public Long getAlbumId() {
-		return albumId;
-	}
-	public void setAlbumId(Long albumId) {
-		this.albumId = albumId;
-	}
+	}*/
 	public Date getCreateDate() {
 		return createDate;
 	}
@@ -114,8 +138,7 @@ public class Song implements Serializable{
 				+ ", sWAdd=" + sWAdd + ", sMvAdd=" + sMvAdd + ", sLrcAdd="
 				+ sLrcAdd + ", sText=" + sText + ", sClickNum=" + sClickNum
 				+ ", sDown=" + sDown + ", sOwner=" + sOwner + ", sAlbum="
-				+ sAlbum + ", singerId=" + singerId + ", albumId=" + albumId
-				+ ", createDate=" + createDate + "]";
+				+ sAlbum + ", createDate=" + createDate + "]";
 	}
 	public Song() {
 		super();

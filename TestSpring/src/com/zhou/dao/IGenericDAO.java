@@ -23,7 +23,7 @@ public interface IGenericDAO<T, PK extends Serializable> {
      * @param entity
      */
     public void save(T entity);
-    
+    public void save2(T entity);
     /**
      * 返回Id的添加
      * @param entity
@@ -54,6 +54,7 @@ public interface IGenericDAO<T, PK extends Serializable> {
      * @return list
      */
     public List<T> findAll();
+    public List<T> findAllByHql();
  
     /**
      * 分页查询所有

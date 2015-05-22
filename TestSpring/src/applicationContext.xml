@@ -45,16 +45,22 @@
 				</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
 			</props>
 		</property>
 		<property name="mappingResources">
 			<list>
 				<value>com/zhou/account/bean/Account.hbm.xml</value>
 				<value>com/zhou/song/bean/SongType.hbm.xml</value>
+				<value>com/zhou/song/bean/ArtType.hbm.xml</value>
+				<value>com/zhou/song/bean/Song.hbm.xml</value>
 				<value>com/zhou/song/bean/Menu.hbm.xml</value>
 				<value>com/zhou/song/bean/SubMenu.hbm.xml</value>
 				<value>com/many/type.hbm.xml</value>
 				<value>com/many/user.hbm.xml</value>
+				<value>com/zhou/song/bean/Album.hbm.xml</value>
+				<value>com/zhou/song/bean/Collection.hbm.xml</value>
+				<value>com/zhou/song/bean/Comment.hbm.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -90,7 +96,25 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
+	<bean id="artTypeDao" class="com.zhou.dao.ArtTypeDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 	<bean id="managerAccountDao" class="com.zhou.dao.ManagerAccountDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="collectionDao" class="com.zhou.dao.CollectionDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="commentDao" class="com.zhou.dao.CommentDaoImpl"
 		abstract="false" lazy-init="default" autowire="default">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
@@ -114,6 +138,12 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
+	<bean id="songDao" class="com.zhou.dao.SongDaoImpl"
+		abstract="false" lazy-init="default" autowire="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 	<!-- <bean id="persion" class="test.Persion"> <property name="userAccountDao"> 
 		<ref bean="userAccountDao"/> </property> </bean> -->
 	<bean id="accountManager" class="com.zhou.manager.AccountManager">
@@ -131,6 +161,7 @@
 	<!-- 事务处理 -->
 	<tx:advice id="txAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
+			<tx:method name="main*" propagation="REQUIRED" />
 			<tx:method name="save*" propagation="REQUIRED" />
 			<tx:method name="delete*" propagation="REQUIRED" />
 			<tx:method name="update*" propagation="REQUIRED" />
@@ -143,4 +174,25 @@
 		<aop:pointcut id="allServiceMethod" expression="execution(* com.zhou.service.*.*(..))" />
 		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice" />
 	</aop:config>
+	<aop:config>
+		<aop:pointcut id="allServiceMethod2" expression="execution(* test.*.*(..))" />
+		<aop:advisor pointcut-ref="allServiceMethod2" advice-ref="txAdvice" />
+	</aop:config>
+	<bean name="myMail" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host">
+			<value>smtp.163.com</value>
+		</property>
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.stmp.auth">true</prop>
+				<prop key="mail.smtp.timeout">25000</prop>
+			</props>
+		</property>
+		<property name="username">  
+            	<value>zhoujundong111@163.com</value>  
+        	</property>  
+        	<property name="password">  
+            	<value>xvmdujeduhmorgyi</value>  
+        	</property>
+	</bean>
 </beans>

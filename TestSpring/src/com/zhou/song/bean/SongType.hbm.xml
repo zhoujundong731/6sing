@@ -11,5 +11,13 @@
         <property name="stName" type="java.lang.String">
             <column name="STNAME" />
         </property>
+        <set name="songs" inverse="true" table="song_songtype" lazy="true" fetch="join">
+        	<key>
+        		<column name="ref_stId"></column>
+        	</key>
+        	<many-to-many entity-name="com.zhou.song.bean.Song">
+        		<column name="ref_sId" not-null="true"></column>
+        	</many-to-many>
+        </set>
     </class>
 </hibernate-mapping>

@@ -38,14 +38,34 @@
         <property name="sAlbum" type="java.lang.String" access="field">
             <column name="SALBUM" />
         </property>
-        <property name="singerId" type="java.lang.Long">
+        <!--<property name="singerId" type="java.lang.Long">
             <column name="SINGERID" />
         </property>
-        <property name="albumId" type="java.lang.Long">
+         <property name="albumId" type="java.lang.Long">
             <column name="ALBUMID" />
-        </property>
+        </property> -->
         <property name="createDate" type="java.util.Date">
             <column name="CREATEDATE" />
         </property>
+        <set name="songtypes" inverse="false" table="song_songtype" lazy="true" fetch="join">
+        	<key>
+        		<column name="ref_sId"></column>
+        	</key>
+        	<many-to-many entity-name="com.zhou.song.bean.SongType">
+        		<column name="ref_stId" not-null="true"></column>
+        	</many-to-many>
+        </set>
+        <set name="comments" table="COMMENT" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+        	<key>
+        		<column name="SID"></column>
+        	</key>
+        	<one-to-many class="com.zhou.song.bean.Comment"/>
+        </set>
+        <many-to-one name="account" class="com.zhou.account.bean.Account" lazy="false" update="true" fetch="select" insert="true">
+        	<column name="ID"></column>
+        </many-to-one>
+        <many-to-one name="album" class="com.zhou.song.bean.Album" lazy="proxy" update="true" fetch="select" insert="true">
+        	<column name="BID"></column>
+        </many-to-one>
     </class>
 </hibernate-mapping>

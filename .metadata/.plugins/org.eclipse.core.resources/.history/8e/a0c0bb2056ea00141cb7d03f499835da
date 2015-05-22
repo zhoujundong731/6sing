@@ -1,5 +1,0 @@
-package HibernateDao;
-
-public class AccountDaoImpl {
-
-}

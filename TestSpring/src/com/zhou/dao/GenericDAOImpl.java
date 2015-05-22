@@ -11,6 +11,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaSpecification;
 import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Example;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projection;
 import org.hibernate.criterion.Projections;
@@ -22,6 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.util.Assert;
+
 import com.zhou.vo.PageBean;
 
 /**
@@ -226,6 +228,18 @@ HibernateDaoSupport implements IGenericDAO<T, PK> {
 	@Override
 	public void update(T entity) {
 		super.getHibernateTemplate().update(entity);
+	}
+
+	@Override
+	public void save2(T entity) {
+		super.getHibernateTemplate().save(entity);
+		
+	}
+
+	@Override
+	public List<T> findAllByHql() {
+		// TODO Auto-generated method stub
+		return this.find("from "+this.entityClass.getSimpleName());
 	}
 
 

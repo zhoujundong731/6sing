@@ -1,6 +1,8 @@
 package com.zhou.song.bean;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SongType implements Serializable{
 	/**
@@ -9,7 +11,17 @@ public class SongType implements Serializable{
 	private static final long serialVersionUID = -5612109349658895226L;
 	private Long stId;
 	private String stName;
+	private Set<Song> songs=new HashSet<Song>();
 	
+	
+	public Set<Song> getSongs() {
+		return songs;
+	}
+	
+	public void setSongs(Set<Song> songs) {
+		this.songs = songs;
+	}
+
 	public Long getStId() {
 		return stId;
 	}

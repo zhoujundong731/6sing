@@ -2,6 +2,10 @@ package com.zhou.song.bean;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.zhou.account.bean.SingerAccount;
 
 public class Album implements Serializable{
 
@@ -16,9 +20,34 @@ public class Album implements Serializable{
 	private Date bIssueDate;
 	private Date bCreateDate;
 	private String bOwner;
-	private Long singerId;
+	private Set<Song> songs=new HashSet<Song>();
+	private SingerAccount singer;
 	
 	
+	public SingerAccount getSinger() {
+		return singer;
+	}
+
+
+
+	public void setSinger(SingerAccount singer) {
+		this.singer = singer;
+	}
+
+
+
+	public Set<Song> getSongs() {
+		return songs;
+	}
+
+
+
+	public void setSongs(Set<Song> songs) {
+		this.songs = songs;
+	}
+
+
+
 	public Long getbId() {
 		return bId;
 	}
@@ -101,19 +130,6 @@ public class Album implements Serializable{
 	}
 
 
-
-	public Long getSingerId() {
-		return singerId;
-	}
-
-
-
-	public void setSingerId(Long singerId) {
-		this.singerId = singerId;
-	}
-
-
-
 	public Album() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -125,7 +141,6 @@ public class Album implements Serializable{
 	public String toString() {
 		return "Album [bId=" + bId + ", bName=" + bName + ", bText=" + bText
 				+ ", bImage=" + bImage + ", bIssueDate=" + ", bOwner=" + bOwner
-				+ ", singerId=" + singerId
 				+ "]";
 	}
 	

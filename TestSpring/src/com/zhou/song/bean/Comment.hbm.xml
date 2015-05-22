@@ -8,12 +8,12 @@
             <column name="CID" />
             <generator class="assigned" />
         </id>
-        <property name="songId" type="java.lang.Long">
+        <!-- <property name="songId" type="java.lang.Long">
             <column name="SONGID" />
         </property>
         <property name="userId" type="java.lang.Long">
             <column name="USERID" />
-        </property>
+        </property> -->
         <property name="userName" type="java.lang.String">
             <column name="USERNAME" />
         </property>
@@ -26,5 +26,11 @@
         <property name="cText" type="java.lang.String" access="field">
             <column name="CTEXT" />
         </property>
+        <many-to-one name="song" class="com.zhou.song.bean.Song" lazy="proxy" update="true" fetch="select" insert="true">
+        	<column name="SID"></column>
+        </many-to-one>
+        <many-to-one name="user" class="com.zhou.account.bean.UserAccount" lazy="proxy" update="true" fetch="select" insert="true">
+        	<column name="ID"></column>
+        </many-to-one>
     </class>
 </hibernate-mapping>

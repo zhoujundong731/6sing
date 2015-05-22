@@ -1,8 +1,0 @@
-package com.zhou.song.bean;
-
-import java.io.Serializable;
-
-public class ArtType implements Serializable{
-	private Long atId;
-	private String atName;
-}

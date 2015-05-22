@@ -1,8 +1,0 @@
-package com.zhou.song.bean;
-
-import java.io.Serializable;
-
-public class SongType implements Serializable{
-	private Long stId;
-	private String stName;
-}

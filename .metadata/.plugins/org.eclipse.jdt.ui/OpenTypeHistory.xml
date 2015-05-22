@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+<typeInfo handle="=TestSpring/src&lt;test{China.java[China" modifiers="1" timestamp="1430271861218"/>
+<typeInfo handle="=TestSpring/src&lt;test{English.java[English" modifiers="1" timestamp="1430271861218"/>
+<typeInfo handle="=TestSpring/src&lt;test{Persion.java[Persion" modifiers="1" timestamp="1430292388131"/>
+<typeInfo handle="=TestSpring/lib\/jta-1.1.jar&lt;javax.transaction(UserTransaction.class[UserTransaction" modifiers="1537" timestamp="1430271861155"/>
+<typeInfo handle="=TestSpring/D:\/Program Files \(x86)\/Java\/jre7\/lib\/rt.jar&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1419239614897"/>
+<typeInfo handle="=TestSpring/src&lt;com.zhou.dao{ISingerAccountDao.java[ISingerAccountDao" modifiers="513" timestamp="1430376754413"/>
+<typeInfo handle="=TestSpring/src&lt;com.zhou.song.bean{SubMenu.java[SubMenu" modifiers="1" timestamp="1430384682277"/>
+<typeInfo handle="=TestSpring/src&lt;com.zhou.song.bean{Menu.java[Menu" modifiers="1" timestamp="1430384469415"/>
+<typeInfo handle="=TestSpring/src&lt;com.zhou.dao{IGenericDAO.java[IGenericDAO" modifiers="513" timestamp="1430724812430"/>
+</typeInfoHistroy>

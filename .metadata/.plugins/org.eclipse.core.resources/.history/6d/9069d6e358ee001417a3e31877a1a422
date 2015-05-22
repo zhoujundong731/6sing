@@ -1,8 +1,0 @@
-package com.zhou.vo;
-
-public class PageBean {
-	private int showNumber;//每页显示的条目数
-	private int currentPage;//当前页数
-	private int totalElement;//总条目数
-	private int totalPage;
-}

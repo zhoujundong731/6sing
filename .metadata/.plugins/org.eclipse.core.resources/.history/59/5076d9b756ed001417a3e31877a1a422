@@ -1,5 +1,0 @@
-package com.zhou.dao;
-
-public interface IUserAccountDao extends{
-
-}

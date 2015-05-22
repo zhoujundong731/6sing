@@ -1,6 +1,11 @@
 package com.zhou.account.bean;
 
-import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.zhou.song.bean.Collection;
+import com.zhou.song.bean.Comment;
+import com.zhou.song.bean.Song;
 
 public class UserAccount extends Account {
 	/**
@@ -13,7 +18,28 @@ public class UserAccount extends Account {
 	private Long phoneNumber;
 	private String presentation;
 	private String address;
+	private Set<Song> songs=new HashSet<Song>();
+	private Set<Collection> collections=new HashSet<Collection>();
+	private Set<Comment> comments=new HashSet<Comment>();
 	
+	public Set<Comment> getComments() {
+		return comments;
+	}
+	public void setComments(Set<Comment> comments) {
+		this.comments = comments;
+	}
+	public Set<Collection> getCollections() {
+		return collections;
+	}
+	public void setCollections(Set<Collection> collections) {
+		this.collections = collections;
+	}
+	public Set<Song> getSongs() {
+		return songs;
+	}
+	public void setSongs(Set<Song> songs) {
+		this.songs = songs;
+	}
 	public String getAddress() {
 		return address;
 	}

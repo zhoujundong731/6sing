@@ -1,7 +1,0 @@
-package test;
-
-import com.zhou.dao.IUserAccountDao;
-
-public class UserAccountManager {
-	private IUserAccountDao userAccountDao;
-}

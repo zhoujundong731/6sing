@@ -11,5 +11,13 @@
         <property name="atName" type="java.lang.String">
             <column name="ATNAME" />
         </property>
+        <set name="singers" inverse="true" table="singer_arttype" lazy="true" fetch="join">
+        	<key>
+        		<column name="atId"></column>
+        	</key>
+        	<many-to-many entity-name="com.zhou.account.bean.SingerAccount">
+        		<column name="id" not-null="true"></column>
+        	</many-to-many>
+        </set>
     </class>
 </hibernate-mapping>

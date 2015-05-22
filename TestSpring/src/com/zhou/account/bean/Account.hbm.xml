@@ -48,6 +48,24 @@
 	         <property name="address" type="java.lang.String">
 	            <column name="ADDRESS" />
 	        </property>
+	        <set name="songs" table="SONG" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+	        	<key>
+	        		<column name="ID"></column>
+	        	</key>
+	        	<one-to-many class="com.zhou.song.bean.Song"/>
+	        </set>
+	        <set name="collections" table="COLLECTION" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+	        	<key>
+	        		<column name="ID"></column>
+	        	</key>
+	        	<one-to-many class="com.zhou.song.bean.Collection"/>
+	        </set>
+	        <set name="comments" table="COMMENT" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+	        	<key>
+	        		<column name="ID"></column>
+	        	</key>
+	        	<one-to-many class="com.zhou.song.bean.Comment"/>
+	        </set>
         </joined-subclass>
         <joined-subclass name="com.zhou.account.bean.ManagerAccount" table="MANAGERACCOUNT">
 	        <key column="ACCOUNTID">
@@ -74,6 +92,26 @@
 	        <property name="presentation" type="java.lang.String">
 	            <column name="PRESENTATION" />
 	        </property>
+	        <set name="artTypes" inverse="false" table="singer_arttype" lazy="true" fetch="join">
+	        	<key>
+	        		<column name="id"></column>
+	        	</key>
+	        	<many-to-many entity-name="com.zhou.song.bean.ArtType">
+	        		<column name="atId" not-null="true"></column>
+	        	</many-to-many>
+	        </set>
+	        <set name="songs" table="SONG" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+	        	<key>
+	        		<column name="ID"></column>
+	        	</key>
+	        	<one-to-many class="com.zhou.song.bean.Song"/>
+	        </set>
+	        <set name="albums" table="ALBUM" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join"  access="field">
+	        	<key>
+	        		<column name="ID"></column>
+	        	</key>
+	        	<one-to-many class="com.zhou.song.bean.Album"/>
+	        </set>
     	</joined-subclass>
     </class>
 </hibernate-mapping>

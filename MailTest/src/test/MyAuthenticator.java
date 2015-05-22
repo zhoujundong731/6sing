@@ -12,7 +12,7 @@ public class MyAuthenticator extends javax.mail.Authenticator {
 		this.userName=userName.trim();  
 		this.password=password.trim();  
 	}  
-	protected PasswordAuthentication getPasswordAuthentication(){     
+	protected PasswordAuthentication getPasswordAuthentication(){  
 		return new PasswordAuthentication(userName, password);     
 	}   
 }

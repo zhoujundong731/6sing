@@ -169,7 +169,7 @@ public class InitLinsener implements ServletContextListener, ServletContextAttri
      */
     public void attributeReplaced(ServletContextAttributeEvent arg0) {
     	
-        System.out.println("attributeReplaced"+arg0.getName());
+        System.out.println("attributeReplaced   "+arg0.getName());
         Map<String, String> map=(Map<String, String>) arg0.getServletContext().getAttribute(arg0.getName());
         File file=new File(arg0.getServletContext().getRealPath("")+"/register.xml");
         Properties properties=new Properties();

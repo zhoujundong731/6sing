@@ -26,8 +26,17 @@
         <property name="bOwner" type="java.lang.String" access="field">
             <column name="BOWNER" />
         </property>
-        <property name="singerId" type="java.lang.Long">
+<!--         <property name="singerId" type="java.lang.Long">
             <column name="SINGERID" />
-        </property>
+        </property> -->
+        <set name="songs" table="SONG" cascade="all-delete-orphan" inverse="false" lazy="true" fetch="join">
+        	<key>
+        		<column name="BID"></column>
+        	</key>
+        	<one-to-many class="com.zhou.song.bean.Song"/>
+        </set>
+        <many-to-one name="singer" class="com.zhou.account.bean.SingerAccount" update="true" fetch="select" insert="true">
+        	<column name="ID"></column>
+        </many-to-one>
     </class>
 </hibernate-mapping>

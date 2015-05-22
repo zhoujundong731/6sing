@@ -16,7 +16,10 @@
 String width=map.get(RegisterCon.RE_WIDTH);
 %>
 <%=width%>
-<a href="register.jsp">注册</a>
+<a href="register.jsp" target="_Blank">注册</a>
 <a href="updateRegiserConfiger">修改</a>
+<a href="testJs.jsp">jsTest</a>
+<a href="Music.jsp">Music</a>
+<a href="mv.jsp">MV</a>
 </body>
 </html>

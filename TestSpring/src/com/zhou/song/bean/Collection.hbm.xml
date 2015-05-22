@@ -6,16 +6,22 @@
     <class name="com.zhou.song.bean.Collection" table="COLLECTION">
         <id name="ctId" type="java.lang.Long">
             <column name="CTID" />
-            <generator class="assigned" />
+            <generator class="native" />
         </id>
-        <property name="singerId" type="java.lang.Long">
+        <!-- <property name="singerId" type="java.lang.Long">
             <column name="SINGERID" />
         </property>
         <property name="songId" type="java.lang.Long">
             <column name="SONGID" />
-        </property>
+        </property> -->
         <property name="createDate" type="java.util.Date">
             <column name="CREATEDATE" />
         </property>
+        <many-to-one name="song" lazy="false">
+        	<column name="SID"></column>
+        </many-to-one>
+        <many-to-one name="user" class="com.zhou.account.bean.UserAccount" lazy="proxy" update="true" fetch="select" insert="true">
+        	<column name="ID"></column>
+        </many-to-one>
     </class>
 </hibernate-mapping>
